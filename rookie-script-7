@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#Read one character from the user (this may be Y, y, N, n).
+#If the character is Y or y display “YES”. If the character is N or n display “NO”.
+
+echo "Yes or no"
+read input_variable
+if [[ $input_variable =~ ^[nN]$ ]]; then
+    echo "NO"
+elif [[ $input_variable =~ ^[yY]$ ]]; then
+    echo "YES"
+else echo "Invalid input"
+fi

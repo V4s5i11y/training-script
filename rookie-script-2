@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Type the first number"
+read first_variable
+echo "Type the second number"
+read second_variable
+echo "Here the sum of these two numbers: " $((first_variable + second_variable))

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "Enter a username"
+read user
+if [ $user == $(whoami) ]; then 
+    echo "You're right, you're logged in as $user"
+else 
+   echo "No, you're logged in as another user"
+fi

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "Displaying CPU information"
+
+#lscpu 
+#cat /proc/cpuinfo
+sysctl -a | grep cpu

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Please enter a valid number"
+read input_variable
+if [[ $input_variable -gt 0 ]] && [[ $input_variable -lt 11 ]]; then
+    echo $((input_variable * 2))
+else
+    echo "Error"
+fi
+
+##adding some random text to check git.

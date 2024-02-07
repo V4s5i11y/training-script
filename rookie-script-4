@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Write a bash script that reads two numbers from user(input divided by space) 
+# and prints their addition,division,multiplication,subtraction
+
+echo "Enter two numbers divided by space"
+read num1 num2
+
+echo -e $((num1+num2)) $((num1/num2)) $((num1*num2)) $((num1-num2))

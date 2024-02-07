@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Enter the first value"
+read first_variable
+echo "Enter the second value"
+read second_variable
+
+if [[ $first_variable -gt $second_variable ]]; then
+    echo $first_variable
+else
+    echo $second_variable
+fi
