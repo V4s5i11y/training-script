@@ -1,0 +1,28 @@
+#!/bin/bash
+
+echo "Enter three sides of a triangle"
+read -p "Enter X:" x
+read -p "Enter Y:" y
+read -p "Enter Z:" z
+
+function if_triangle() {
+    if (($x + $y <= $z || $x + $z <= $y || $y + $z <= $x)); then
+        echo "Not a valid triangle"
+        return 1 #returns an error 
+    else 
+        return 0
+    fi
+}
+
+function which_triangle () {
+    if (($x == $y && $y == $z)); then
+        echo "This triangle is Equilateral"
+    elif (($x == $y || $x == $z || $y == $z)); then
+        echo "This triangle is Isosceles"
+    else echo "This triangle is Scalene"
+    fi
+}
+
+if if_triangle; then
+    which_triangle
+fi

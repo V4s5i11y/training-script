@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#checks if the file exists in the filesystem 
+
+read -p "Please enter the file name: " file
+function file_existence {
+    if find / -name "$file" 2>/dev/null| grep -q .; then
+        echo "The file exists."
+        return 0
+    else 
+        echo "The file doesn't exist."
+        return 1
+    fi
+}
+
+file_existence
